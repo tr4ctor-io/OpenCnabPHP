@@ -26,7 +26,8 @@
 namespace CnabPHP\samples;
 use \CnabPHP\Retorno;
 include("../autoloader.php");
-$fileContent = file_get_contents("IEDCBR811510202013128.ret");
+//$fileContent = file_get_contents("retorno_cnab240_caixa.ret");
+$fileContent = file_get_contents("/var/www/html/OpenCnabPHP/samples/P251632D11032024H180008_003911.RET");
 
 $arquivo = new Retorno($fileContent);
 
@@ -38,12 +39,13 @@ foreach($registros as $registro)
         $valorRecebido = $registro->vlr_pago;
         $dataPagamento = $registro->R3U->data_credito;
 		$carteira      = $registro->carteira;
-        $vlr_juros_multa = $registro->valor;
+        // $vlr_juros_multa = $registro->valor;
         $vlr_desconto = $registro->R3U->vlr_desconto;
-        echo $nossoNumero.'<br />';
-        echo $vlr_desconto.'<br />';
-        echo $dataPagamento.'<br />';
-        echo $vlr_juros_multa.'<br />';
+        var_dump([$nossoNumero, $vlr_desconto, $dataPagamento]);
+        // echo $nossoNumero.'<br />';
+        // echo $vlr_desconto.'<br />';
+        // echo $dataPagamento.'<br />';
+        // echo $vlr_juros_multa.'<br />';
 		// você ja pode dar baixa
     }
 }

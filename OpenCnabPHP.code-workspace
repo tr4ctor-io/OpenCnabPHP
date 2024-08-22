@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../processo_seletivo_cemed_palmares-10-06-2024-17-04-05"
+		},
+		{
+			"path": "../sistema.isolucoes.inf.br"
+		},
+		{
+			"path": "../boletophp"
+		},
+		{
+			"path": "../carne"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.spec": "gauge",
+			"*.cpt": "gauge"
+		}
+	}
+}
